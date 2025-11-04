@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 
 
 
+
 {/* Fonts  */}
 const headingFont = Italianno({
   subsets: ["latin"],
@@ -35,7 +36,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${headingFont.variable} ${bodyFont.variable}`}>
         <Header/>
-        {children}
+        <main className="min-h-screen px-6">
+           {children}
+        </main>
         <Footer/>
       </body>
     </html>

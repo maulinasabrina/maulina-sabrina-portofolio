@@ -2,10 +2,13 @@
 
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
+
 export default function Header() {
+
+  {/* Navigasi Link */}
   const [open, setOpen] = useState(false);
 
   const links = [
@@ -15,12 +18,34 @@ export default function Header() {
     { href: "#contact", label: "Contact" },
   ];
 
-//   console.log(headingFont.variable);
+  {/* Navbar Stick and Scroll */}
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
-    <nav className="w-full fixed top-0 left-0 z-50 font-body">
+    // <nav className="w-full fixed top-0 left-0 z-50 font-body bg-background ">
+    // <nav className="w-full sticky top-0 left-0 z-50 font-body bg-background transition-all duration-300  ">
+    <nav className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'py-3 bg-background/80 backdrop-blur-md shadow-sm' : 'py-6'
+      }`}>
+     
 
-      <div className="max-w-8xl mx-auto px-8 lg:px-24  py-4 flex items-center justify-between">
+      <div className="max-w-8xl mx-auto px-8 lg:px-24   flex items-center justify-between">
         
         {/* Logo */}
         <Link href="/" className="font-semibold text-lg ">
