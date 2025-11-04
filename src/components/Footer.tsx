@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Socials from "./Socials";
 
 
 export default function Footer() {
@@ -10,7 +11,7 @@ export default function Footer() {
                 {/* © 2024 Maulina Sabrina. All rights reserved. */}
                  <Link href="/" className="w-60 text-start font-heading text-md xl:text-2xl ">©Maulina Sabrina</Link>
                  <Link href="/" className="w-60 text-center font-heading text-md xl:text-2xl ">maulinasabrina04@gmail.com</Link>
-                 <Link href="/" className="w-60 text-end font-heading text-md xl:text-2xl ">2025</Link>
+                 <Link href="/" className="w-60 text-end font-heading text-md xl:text-2xl "><Socials /></Link>
             </div>
       
    
