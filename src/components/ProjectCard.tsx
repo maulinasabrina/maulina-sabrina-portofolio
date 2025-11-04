@@ -2,20 +2,30 @@
 
 import { Github, ExternalLink } from "lucide-react";
 
+
 interface ProjectCardProps {
  title: string;
   description: string;
   tags: string[];
   github: string;
   live: string;
+  thumbnail: string; 
 }
 
 // const ProjectCard = ({ title, description }: ProjectCardProps) => {
 //   return <div>{title}: {description}</div>;
 
-export const ProjectCard = ({ title, description, tags, github, live}: ProjectCardProps) => {
+export const ProjectCard = ({ title, description, tags, github, live, thumbnail}: ProjectCardProps) => {
   return (
     <div className="group rounded-xl p-6 bg-background border-1 border-border/30 shadow-md hover:bg-primary/10 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+       {/* Thumbnail */}
+      <div className="mb-4 overflow-hidden rounded-lg">
+        <img
+          src={thumbnail}
+          alt={title}
+          className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+        />
+      </div>
       
       <h3 className="text-2xl font-semibold text-primary/70 mb-2 group-hover:text-primary transition">
         {title}

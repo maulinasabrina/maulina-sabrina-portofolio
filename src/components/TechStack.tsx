@@ -23,7 +23,7 @@ export default function TechStack() {
   ];
 
   return (
-  <div className='w-full lg:w-5xl mt-2 md:mt-10 xl:mt-4 py-5 flex flex-col md:flex-row justify-start  gap-3 md:gap-10  items-center '>
+  <div  id="projects" className='w-full lg:w-5xl mt-2 md:mt-10 xl:mt-4 py-5 flex flex-col md:flex-row justify-start  gap-3 md:gap-10  items-center '>
                 <h1 className='w-fit text-primary text-2xl font-extrabold text-center'>Tech Stack</h1>
                 <div className='w-fit lg:w-fit justify-start rounded-full grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2'>
                      {techStack.map((tech) => (
