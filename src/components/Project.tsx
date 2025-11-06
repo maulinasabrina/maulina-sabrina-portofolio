@@ -1,42 +1,8 @@
 import Link from "next/link";
 import { ProjectCard } from "./ProjectCard";
+import { projects } from "../app/data/data";
 
 export default function Project() {
-interface ProjectData {
-  title: string;
-  description: string;
-  tags: string[];
-  github: string;
-  live: string;
-  thumbnail: string; 
-}
-
-const projects: ProjectData[] = [
-  {
-    title: "E-Commerce Platform",
-    description: "Full-stack store with cart, auth, & payments.",
-    tags: ["React", "Node.js", "PostgreSQL"],
-    github: "https://github.com",
-    live: "https://example.com",
-    thumbnail: "https://via.placeholder.com/400x300.png?text=E-Commerce"
-  },
-  {
-    title: "Task Manager App",
-    description: "Task app with real-time sync & offline mode.",
-    tags: ["React Native", "Firebase"],
-    github: "https://github.com",
-    live: "https://example.com",
-     thumbnail: "https://via.placeholder.com/400x300.png?text=E-Commerce"
-  },
-  {
-    title: "Weather Dashboard",
-    description: "Weather forecast & analytics UI.",
-    tags: ["Next.js", "Tailwind"],
-    github: "https://github.com",
-    live: "https://example.com",
-     thumbnail: "https://via.placeholder.com/400x300.png?text=E-Commerce"
-  }
-];
 
   return (
     <>

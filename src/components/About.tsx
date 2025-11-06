@@ -1,10 +1,6 @@
+import { tools } from "../app/data/data";
+
 export default function About() {
-  const tools = [
-    { name: "Notion" },
-    { name: "Figma" },
-    { name: "VS Code" },
-    { name: "Github" },
-  ];
 
   return (
     <section className="w-full py-12 px-6 md:px-10 lg:px-20 xl:px-36 mx-auto">

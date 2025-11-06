@@ -1,21 +1,13 @@
 "use client";
 
 import { Github, ExternalLink } from "lucide-react";
+import { ProjectData } from "../app/data/definitions";
 
-
-interface ProjectCardProps {
- title: string;
-  description: string;
-  tags: string[];
-  github: string;
-  live: string;
-  thumbnail: string; 
-}
 
 // const ProjectCard = ({ title, description }: ProjectCardProps) => {
 //   return <div>{title}: {description}</div>;
 
-export const ProjectCard = ({ title, description, tags, github, live, thumbnail}: ProjectCardProps) => {
+export const ProjectCard = ({ title, description, tags, github, live, thumbnail}: ProjectData) => {
   return (
     <div className="group rounded-xl p-6 bg-background border-1 border-border/30 shadow-md hover:bg-primary/10 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
        {/* Thumbnail */}

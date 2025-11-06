@@ -1,26 +1,8 @@
+import { techStack } from "../app/data/data";
 
 
 export default function TechStack() {
-   const techStack = [
-    { name: 'HTML5', icon: '🌐' },
-    { name: 'Tailwind', icon: '🎨' },
-    { name: 'SQL', icon: '🗄️' },
-    { name: 'React', icon: '⚛️' },
-    { name: 'JavaScript', icon: '📜' },
-    { name: 'Python', icon: '🐍' },
-    { name: 'Node.js', icon: '🟢' },
-    { name: 'Git', icon: '📊' },
-    { name: 'HTML5 2', icon: '🌐' },
-    { name: 'Tailwind2', icon: '🎨' },
-    { name: 'SQL2', icon: '🗄️' },
-    { name: 'React2', icon: '⚛️' },
-    { name: 'Git2', icon: '📊' },
-    { name: 'HTML', icon: '🌐' },
-    { name: 'Tailwind1', icon: '🎨' },
-    { name: 'SQL1', icon: '🗄️' },
-    { name: 'React1', icon: '⚛️' },
-
-  ];
+  
 
   return (
   <div  id="projects" className='w-full lg:w-5xl mt-2 md:mt-10 xl:mt-4 py-5 flex flex-col md:flex-row justify-start  gap-3 md:gap-10  items-center '>
