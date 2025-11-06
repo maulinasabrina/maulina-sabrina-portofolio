@@ -48,13 +48,13 @@ export default function Header() {
       <div className="max-w-8xl mx-auto px-8 lg:px-24   flex items-center justify-between">
         
         {/* Logo */}
-        <Link href="/" className="font-semibold text-lg ">
+        <Link href="/" className="font-semibold text-lg">
           <Image
              src="/assets/images/logo.png"
             alt="Logo"
-            width={100}
-            height={100}
-            // className="rounded-full"
+            width={80}
+            height={80}
+            className="w-20 h-10 lg:w-25 lg:h-15 object-contain"
             />
     
       
