@@ -36,14 +36,18 @@ export default function About() {
             <h2 className="text-xl font-semibold mb-4 text-primary">
               Tools I Use
             </h2>
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-2 gap-4">
               {tools.map((tool) => (
                 <div
-                  key={tool.name}
+                  key={tool.icon}
                   className="flex flex-col items-center gap-2 group"
                 >
                   {/* Placeholder (bisa diganti logo nanti) */}
-                  <div className="w-12 h-12 rounded-full bg-muted animate-pulse group-hover:scale-105 transition-transform" />
+                  <img
+                    src={tool.icon}
+                    alt={tool.name}
+                    className="w-10 h-10 rounded-full object-cover group-hover:scale-105 transition-transform"
+                  />
                   <span className="text-sm text-muted-foreground group-hover:text-primary transition-colors">
                     {tool.name}
                   </span>

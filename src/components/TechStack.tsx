@@ -14,7 +14,13 @@ export default function TechStack() {
                       className="group flex items-center gap-1 px-2 py-1 bg-primary/10 rounded-full hover:bg-primary/20 transition-all duration-300 cursor-default"
                       title={tech.name}
                     >
-                      <span className="text-2xl group-hover:scale-110 transition-transform">{tech.icon}</span>
+                      <span className="text-2xl group-hover:scale-110 transition-transform">
+                            <img
+                              src={tech.icon}
+                              alt={tech.name}
+                              className="w-8 h-8 rounded-full object-cover group-hover:scale-105 transition-transform"
+                            />
+                      </span>
                       <span className="text-md text-primary font-medium">{tech.name}</span>
                     </div>
                   ))}

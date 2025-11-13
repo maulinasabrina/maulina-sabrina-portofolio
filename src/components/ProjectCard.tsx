@@ -1,16 +1,24 @@
 "use client";
 
+import Link from "next/link";
 import { Github, ExternalLink } from "lucide-react";
 import { ProjectData } from "../app/data/definitions";
 
+export const ProjectCard = ({
+  title,
+  subtitle,
+  description,
+  tags,
+  github,
+  live,
+  thumbnail,
+}: ProjectData & { slug?: string }) => {
+  // auto-generate slug dari title
+  const slug = title.toLowerCase().replace(/\s+/g, "-");
 
-// const ProjectCard = ({ title, description }: ProjectCardProps) => {
-//   return <div>{title}: {description}</div>;
-
-export const ProjectCard = ({ title, description, tags, github, live, thumbnail}: ProjectData) => {
   return (
-    <div className="group rounded-xl p-6 bg-background border-1 border-border/30 shadow-md hover:bg-primary/10 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-       {/* Thumbnail */}
+    <div className="group rounded-xl p-6 bg-background border border-border/30 shadow-md hover:bg-primary/10 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+      {/* Thumbnail */}
       <div className="mb-4 overflow-hidden rounded-lg">
         <img
           src={thumbnail}
@@ -18,21 +26,28 @@ export const ProjectCard = ({ title, description, tags, github, live, thumbnail}
           className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
         />
       </div>
-      
-      <h3 className="text-2xl font-semibold text-primary/70 mb-2 group-hover:text-primary transition">
+
+      {/* Title */}
+      <h3 className="text-2xl font-semibold text-primary/80 mb-1 group-hover:text-primary transition">
         {title}
       </h3>
 
-      <p className="text-primary mb-4">
+      {/* Subtitle (optional) */}
+      {subtitle && (
+        <p className="text-sm text-primary/60 italic mb-3">{subtitle}</p>
+      )}
+
+      {/* Short description */}
+      <p className="text-primary text-sm mb-4 line-clamp-3">
         {description}
       </p>
 
       {/* Tags */}
       <div className="flex flex-wrap gap-2 mb-6">
-        {tags.map((tag) => (
+        {tags.slice(0, 3).map((tag) => ( // tampilkan 3 tag aja biar gak penuh
           <span
             key={tag}
-            className="text-md px-2 py-1 rounded-full  bg-border text-background "
+            className="text-xs px-2 py-1 rounded-full bg-border text-background"
           >
             {tag}
           </span>
@@ -40,23 +55,33 @@ export const ProjectCard = ({ title, description, tags, github, live, thumbnail}
       </div>
 
       {/* Buttons */}
-      <div className="flex gap-3">
+      <div className="flex gap-3 text-sm">
         <a
           href={github}
           target="_blank"
-          className="px-4 py-2 border border-primary rounded-lg text-sm hover:bg-primary hover:text-white -black transition"
+          rel="noopener noreferrer"
+          className="flex items-center gap-1 px-3 py-2 border border-primary rounded-lg hover:bg-primary hover:text-white transition"
         >
-          Code
+          <Github className="w-4 h-4" /> Code
         </a>
 
         <a
           href={live}
           target="_blank"
-          className="px-4 py-2 rounded-lg bg-primary/80 text-background text-sm hover:bg-primary transition"
+          rel="noopener noreferrer"
+          className="flex items-center gap-1 px-3 py-2 rounded-lg bg-primary/80 text-background hover:bg-primary transition"
         >
-          Live Demo
+          <ExternalLink className="w-4 h-4" /> Live
         </a>
+
+        {/* Link ke halaman detail */}
+        <Link
+          href={`/project/${slug}`}
+          className="flex items-center gap-1 px-3 py-2 rounded-lg border border-border hover:bg-primary/10 transition"
+        >
+          Details →
+        </Link>
       </div>
     </div>
   );
-}
+};

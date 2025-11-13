@@ -6,12 +6,12 @@ export default function Hero() {
   return (
     <>
     {/* Container Padding */}
-    <div  className='w-full py-4 md:py-12 px-6 md:px-10 lg:px-20 xl:px-36  mx-auto'>
+    <div  className='w-full py-4 md:py-12 px-6 md:px-10 lg:px-20 xl:px-36 mx-auto mb-10'>
         {/* Container Img, Text, Tech Stack */}
         <div className='flex flex-col md:flex-row-reverse lg:flex-row-reverse gap-8 items-center '>
 
             <div className='w-30 sm:w-30 md:w-fit lg:w-fit flex justify-center' >
-                <Image src="/assets/images/globe.svg" alt="" className=' bg-primary border-1 border-background rounded-full' width={250} height={250} />
+                <Image src="/assets/images/profil.jpeg" alt="" className=' bg-primary border-3 border-primary rounded-full' width={250} height={250} />
             </div>
 
             {/* Container Texts and Socials */}
