@@ -7,10 +7,10 @@ export default function Project() {
   return (
     <>
     {/* Container Padding */}
-    <section  className='w-full py-4 md:py-12 px-6 md:px-10 lg:px-20 xl:px-36  mx-auto'>
+    <section id="project"  className='w-full py-4 md:py-12 px-6 md:px-10 lg:px-20 xl:px-36  mx-auto'>
         <div className="flex flex-row gap-6 items-center">
           <h1 className='w-fit text-primary text-5xl font-extrabold text-center font-heading'>Project</h1>
-          <p className=""> This is a few project i have done</p>
+          <p className=""> Here are several projects I have developed and contributed to </p>
         </div>
         <div className="grid md:grid-cols-2 gap-8 mt-6">
           {projects.map((project, i) => (

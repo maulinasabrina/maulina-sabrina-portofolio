@@ -17,7 +17,7 @@ export default function Hero() {
             {/* Container Texts and Socials */}
             <div className='w-full flex flex-col gap-4'>
                     <div className='w-full flex flex-col md:flex-row-reverse gap-6 items-center justify-end'>
-                        <h3 className='text-primary-foreground text-md md:text-lg fo nt-semibold bg-primary/70 px-6 py-2 rounded-full'> OPEN TO WORK</h3>
+                        <h3 className='text-primary-foreground text-md md:text-lg fo nt-semibold bg-primary px-6 py-2 rounded-full'> OPEN TO WORK</h3>
                         <h1 className='text-primary font-extrabold text-4xl md:text-5xl font-heading'>Hi, I   &apos;m Maulina</h1>
                     </div>
                     <p className='text-black text-md md:text-lg text-center md:text-left'>

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Contact() {
   return (
-    <section className="w-full py-12 px-6 md:px-10 lg:px-20 xl:px-36 mx-auto text-center md:text-left">
+    <section id="contact" className="w-full py-12 px-6 md:px-10 lg:px-20 xl:px-36 mx-auto text-center md:text-left">
       {/* Heading */}
       <h1 className="text-primary text-5xl font-extrabold font-heading text-start mb-6">
         Contact Me
@@ -14,7 +14,7 @@ export default function Contact() {
         I’m always open to connecting! Whether you have a question, a project idea,
         or just want to say hello — feel free to reach out 💌 You can email me at{" "}
         <a
-          href="mailto:maulinasabrina04@gmail.com"
+          href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=maulinasabrina04@gmail.com"
           className="text-primary underline hover:text-primary/80 transition-colors"
         >
           maulinasabrina04@gmail.com
@@ -76,7 +76,7 @@ export default function Contact() {
         <div className="flex flex-col items-center md:items-end gap-2">
           <p className="text-muted-foreground">Want to see more about my experience?</p>
           <a
-            href="/files/MaulinaSabrina_CV.pdf"
+            href="/assets/files/MaulinaSabrina_CV.pdf"
             download
             className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-background transition-all duration-300"
           >

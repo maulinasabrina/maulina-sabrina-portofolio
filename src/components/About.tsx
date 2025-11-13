@@ -3,7 +3,7 @@ import { tools } from "../app/data/data";
 export default function About() {
 
   return (
-    <section className="w-full py-12 px-6 md:px-10 lg:px-20 xl:px-36 mx-auto">
+    <section id="about" className="w-full py-12 px-6 md:px-10 lg:px-20 xl:px-36 mx-auto">
       <h1 className="text-primary text-5xl font-extrabold font-heading text-start mb-10">
         About Me
       </h1>
