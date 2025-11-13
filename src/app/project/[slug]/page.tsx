@@ -25,7 +25,7 @@ export default async function ProjectDetailPage({
   }
 
   return (
-    <div className="max-w-4xl mx-auto px-6 py-10">
+    <div className="max-w-5xl md:max-w-4xl mx-auto px-1 md:px-6 py-10">
       <h1 className="text-3xl font-bold mb-2">{project.title}</h1>
       {project.subtitle && (
         <p className="text-gray-600 mb-6">{project.subtitle}</p>
