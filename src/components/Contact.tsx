@@ -26,7 +26,7 @@ export default function Contact() {
         {/* Social Links */}
         <div className="flex gap-6">
           <Link
-            href="https://github.com/maolinasabrina"
+            href="https://github.com/maulinasabrina"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex flex-col items-center gap-1"
@@ -38,7 +38,7 @@ export default function Contact() {
           </Link>
 
           <Link
-            href="https://www.linkedin.com/in/maulinasabrina"
+            href="https://www.linkedin.com/in/maulinasabrina/"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex flex-col items-center gap-1"
@@ -50,7 +50,7 @@ export default function Contact() {
           </Link>
 
           <Link
-            href="https://instagram.com/yourusername"
+            href="https://instagram.com/maulinasbrina"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex flex-col items-center gap-1"
