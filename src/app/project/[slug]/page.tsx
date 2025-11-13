@@ -124,7 +124,7 @@ export default async function ProjectDetailPage({
           href={project.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800"
+          className="bg-background text-black border-1 border-primary px-4 py-2 rounded-lg hover:bg-primary hover:text-background"
         >
           GitHub
         </a>
@@ -132,7 +132,7 @@ export default async function ProjectDetailPage({
           href={project.live}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+          className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700"
         >
           Live Demo
         </a>
