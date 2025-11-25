@@ -76,7 +76,7 @@ export default function Contact() {
         <div className="flex flex-col items-center md:items-end gap-2">
           <p className="text-muted-foreground">Want to see more about my experience?</p>
           <a
-            href="/assets/files/MaulinaSabrina_CV.pdf"
+            href="/assets/file/MaulinaSabrina_CV.pdf"
             download
             className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-background transition-all duration-300"
           >
