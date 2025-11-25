@@ -67,7 +67,84 @@ export const projects: ProjectData[] = [
         }
       ]
     }
+  },
+  {
+    title: "Personal Portfolio & Journal Website",
+    subtitle: "A Minimalist Web Platform for Writing Journals and Showcasing Projects ✨",
+    description:
+      "Sebuah situs personal berbasis Laravel yang menyediakan halaman publik untuk menampilkan jurnal dan portofolio proyek, serta dashboard admin untuk mengelola konten. Website ini dibangun dengan konsep clean, minimalis, dan mudah dikembangkan.",
+    tags: [
+      "PHP",
+      "Laravel",
+      "Tailwind CSS",
+      "Vite",
+      "Alpine.js",
+      "Eloquent ORM",
+      "Laravel Breeze",
+      "Portfolio",
+      "Blog System"
+    ],
+    github: "https://github.com/maulina-sabrina/comfort-blog",
+    live: "",
+    thumbnail: "/assets/images/comfort-blog.png",
+    details: {
+      objective: [
+        "Menyediakan platform pribadi untuk menulis jurnal atau blog secara mudah.",
+        "Menampilkan daftar proyek sebagai portofolio dengan tampilan profesional.",
+        "Menyediakan dashboard admin yang aman untuk CRUD jurnal dan proyek.",
+        "Menciptakan tampilan yang clean dan responsif menggunakan Tailwind CSS."
+      ],
+
+      technologies: {
+        backend: [
+          "PHP 8.2",
+          "Laravel 12",
+          "Eloquent ORM",
+          "Laravel Breeze (Authentication)"
+        ],
+        frontend: [
+          "Tailwind CSS",
+          "Vite",
+          "Alpine.js",
+          "Blade Templates"
+        ],
+        tools: [
+          "Composer",
+          "NPM",
+          "Pest (Testing)",
+          "VS Code"
+        ]
+      },
+
+      features: [
+        {
+          name: "🔐 Autentikasi Admin",
+          desc: "Login dan register menggunakan Laravel Breeze, dengan proteksi middleware auth."
+        },
+        {
+          name: "📓 CRUD Journal",
+          desc: "Admin dapat membuat, mengedit, menghapus, dan melihat seluruh jurnal dengan slug otomatis."
+        },
+        {
+          name: "📰 Halaman Publik Journal",
+          desc: "Pengguna dapat melihat daftar jurnal dan membaca detail berdasarkan slug."
+        },
+        {
+          name: "💼 Manajemen Proyek",
+          desc: "Fitur untuk menyimpan project dengan deskripsi, tech stack, GitHub link, dan thumbnail."
+        },
+        {
+          name: "📊 Dashboard Admin",
+          desc: "Tampilan ringkas untuk melihat jumlah jurnal dan proyek secara keseluruhan."
+        },
+        {
+          name: "🎨 Frontend Responsif",
+          desc: "UI minimalis yang dibuat dengan Tailwind, cocok untuk blog dan portofolio modern."
+        }
+      ]
+    }
   }
+
     
 ];
 
