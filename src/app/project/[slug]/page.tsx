@@ -3,7 +3,7 @@ import { projects } from "@/src/app/data/data";
 export default async function ProjectDetailPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }) {
   // karena params adalah Promise, perlu di-await
   const { slug } = await params;

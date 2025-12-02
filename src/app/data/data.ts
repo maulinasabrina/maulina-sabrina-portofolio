@@ -69,7 +69,7 @@ export const projects: ProjectData[] = [
     }
   },
   {
-    title: "Personal Portfolio & Journal Website",
+    title: "Personal Portfolio dan Journal Website",
     subtitle: "A Minimalist Web Platform for Writing Journals and Showcasing Projects ✨",
     description:
       "Sebuah situs personal berbasis Laravel yang menyediakan halaman publik untuk menampilkan jurnal dan portofolio proyek, serta dashboard admin untuk mengelola konten. Website ini dibangun dengan konsep clean, minimalis, dan mudah dikembangkan.",
@@ -84,8 +84,8 @@ export const projects: ProjectData[] = [
       "Portfolio",
       "Blog System"
     ],
-    github: "https://github.com/maulina-sabrina/comfort-blog",
-    live: "",
+    github: "https://github.com/maulinasabrina/maulina-life-repo",
+    live: "https://maulina-life-repo-production-3143.up.railway.app/",
     thumbnail: "/assets/images/comfort-blog.png",
     details: {
       objective: [
@@ -140,10 +140,89 @@ export const projects: ProjectData[] = [
         {
           name: "🎨 Frontend Responsif",
           desc: "UI minimalis yang dibuat dengan Tailwind, cocok untuk blog dan portofolio modern."
+        },
+      ]
+    }
+  },
+  {
+    "title": "Cafe Finder - Web App to Discover Nearby Coffee Shops",
+    "subtitle": "Peta Interaktif untuk Menemukan Kafe Terdekat ☕📍",
+    "description": "Aplikasi web berbasis JavaScript yang menampilkan peta interaktif untuk menemukan kafe di sekitar pengguna. Frontend menggunakan Leaflet dan backend menggunakan Node.js & Express untuk mem-proxy data dari SerpAPI.",
+    "tags": [
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "Leaflet",
+      "OpenStreetMap",
+      "SerpAPI",
+      "Frontend",
+      "Backend",
+      "Geolocation",
+      "Map App"
+    ],
+    "github": "https://github.com/maulinasabrina/cafe_finder",
+    "live": "https://cafefinder-production-c8d8.up.railway.app/",
+    "thumbnail": "/assets/images/cafe-finder.png",
+    "details": {
+      "objective": [
+        "Memberikan cara mudah mencari kafe terdekat melalui peta interaktif.",
+        "Mendukung pencarian berbasis kata kunci seperti 'coffee', 'kopi', dan lainnya.",
+        "Menampilkan marker lengkap dengan nama, rating, dan alamat kafe.",
+        "Menyediakan backend ringan untuk mengambil data kafe real-time dari SerpAPI.",
+        "Membangun aplikasi geolocation yang cepat, minimalis, dan mudah dikembangkan."
+      ],
+
+      "technologies": {
+        "backend": [
+          "Node.js",
+          "Express.js",
+          "Fetch API / Dynamic Import",
+          "Environment Variables (SERP_API_KEY, SERP_BASE_URL)"
+        ],
+        "frontend": [
+          "HTML5",
+          "CSS3",
+          "Vanilla JavaScript",
+          "Leaflet.js",
+          "OpenStreetMap Tiles"
+        ],
+        "tools": [
+          "NPM",
+          "VS Code",
+          "SerpAPI",
+          "Browser Geolocation API"
+        ]
+      },
+
+      "features": [
+        {
+          "name": "📍 Geolokasi Pengguna",
+          "desc": "Menampilkan posisi pengguna di peta dengan marker khusus beserta radius lokasi."
+        },
+        {
+          "name": "🔎 Pencarian Kafe",
+          "desc": "Pencarian berdasarkan kata kunci yang dikirim ke backend kemudian diteruskan ke SerpAPI."
+        },
+        {
+          "name": "📡 Filter Radius",
+          "desc": "Menampilkan kafe dalam radius tertentu berdasarkan pilihan pengguna."
+        },
+        {
+          "name": "☕ Marker Kafe & Popup",
+          "desc": "Marker khusus kafe dengan popup yang menampilkan nama, rating, dan alamat."
+        },
+        {
+          "name": "🌐 Backend API Proxy",
+          "desc": "Endpoint Node.js yang memformat data SerpAPI menjadi JSON siap pakai untuk frontend."
+        },
+        {
+          "name": "🧭 Auto Fit Bounds",
+          "desc": "Peta otomatis menyesuaikan zoom agar seluruh marker pencarian terlihat."
         }
       ]
     }
   }
+
 
     
 ];

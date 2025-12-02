@@ -62,14 +62,14 @@ export default function About() {
               If you’d like to know me beyond the code — the things I love, watch, and write about — <br></br>
               you can visit my personal space below 🌿
             </p>
-            <a
+            {/* <a
               href="https://maulina-life-repo-production-3143.up.railway.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block mt-4 px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-background transition-all duration-300"
             >
               Visit My Personal Space
-            </a>
+            </a> */}
         </div>
     </section>
   );
