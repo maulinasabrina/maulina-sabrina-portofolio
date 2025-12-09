@@ -86,7 +86,7 @@ export const projects: ProjectData[] = [
     ],
     github: "https://github.com/maulinasabrina/maulina-life-repo",
     live: "https://maulina-life-repo-production-3143.up.railway.app/",
-    thumbnail: "/assets/images/comfort-blog.png",
+    thumbnail: "/assets/images/personal.jpeg",
     details: {
       objective: [
         "Menyediakan platform pribadi untuk menulis jurnal atau blog secara mudah.",
@@ -162,7 +162,7 @@ export const projects: ProjectData[] = [
     ],
     "github": "https://github.com/maulinasabrina/cafe_finder",
     "live": "https://cafefinder-production-c8d8.up.railway.app/",
-    "thumbnail": "/assets/images/cafe-finder.png",
+    "thumbnail": "/assets/images/cafe.jpeg",
     "details": {
       "objective": [
         "Memberikan cara mudah mencari kafe terdekat melalui peta interaktif.",
