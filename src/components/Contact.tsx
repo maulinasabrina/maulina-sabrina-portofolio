@@ -7,16 +7,16 @@ export default function Contact() {
     <section
   id="contact"
   className="w-full min-h-screen flex flex-col justify-center
-             px-6 md:px-10 lg:px-20 xl:px-36 mx-auto text-center md:text-left pt-20"
+             px-6 md:px-10 lg:px-20 xl:px-36 mx-auto text-center md:text-left pt-10 md:pt-20"
 >
   {/* Heading */}
-  <div className="flex items-center justify-center gap-6 mb-16">
+  <div className="flex items-center justify-center gap-6 mb-4 md:mb-16">
   
             {/* Left Divider */}
             <div className="hidden md:block h-[2px] w-24 bg-primary/30 rounded-full"></div>
 
             {/* Title */}
-            <h2 className="text-5xl font-heading text-primary font-bold text-center">
+            <h2 className="text-3xl md:text-5xl font-heading text-primary font-bold text-center">
                 Contact
             </h2>
 
@@ -26,7 +26,7 @@ export default function Contact() {
         </div>
 
   {/* Description */}
-  <p className="text-lg leading-relaxed mb-8 text-muted-foreground text-center max-w-2xl mx-auto">
+  <p className="text-sm md:text-lg leading-relaxed mb-8 text-muted-foreground text-center max-w-2xl mx-auto">
     I’m always open to connecting! Whether you have a question, a project idea,
     or just want to say hello — feel free to reach out 💌 You can email me at{" "}
     <a
@@ -36,13 +36,13 @@ export default function Contact() {
       maulinasabrina04@gmail.com
     </a>. 
   </p>
-  <p className="text-lg leading-relaxed mb-8 text-muted-foreground text-center max-w-2xl mx-auto">
+  <p className="text-sm md:text-lg leading-relaxed mb-8 text-muted-foreground text-center max-w-2xl mx-auto">
       or text me personally on link below :D
   </p>
   {/* WhatsApp CTA */}
   <a
     href={`https://wa.me/6282331598307?text=${encodeURIComponent(
-      "Hi Maol 🤍\nJust wanted to say I came across your portfolio and I'd love to get to know you a bit.\nCan I ask you something? ✨"
+      "Hi Maol :D\nJust wanted to say I came across your portfolio and I'd love to get to know you a bit.\nCan I ask you something? "
     )}`}
     target="_blank"
     rel="noopener noreferrer"

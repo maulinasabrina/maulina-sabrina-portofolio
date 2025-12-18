@@ -8,7 +8,7 @@ export default function Hero() {
      <div className="min-h-[calc(100vh-180px)] flex flex-col justify-center mx-auto">
 
 
-        <div className="flex flex-col md:flex-row items-center gap-12">
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
 
          {/* FOTO */}
         <div className="flex justify-center md:justify-start">
@@ -19,7 +19,7 @@ export default function Hero() {
             flex items-center justify-center
             
             /* MOBILE */
-            w-[160px] h-[160px] border-2 border-primary md:border-none
+            w-[120px] h-[120px] 
             
             /* DESKTOP RECTANGLE */
             md:w-[280px] md:h-[320px]
@@ -34,7 +34,7 @@ export default function Hero() {
                 object-cover rounded-xl
                 
                 /* MOBILE FOTO */
-                w-[120px] h-[120px]
+                w-[120px] h-[120px] border-2 border-primary md:border-none
                 
                 /* DESKTOP FOTO KECIL DI TENGAH */
                 md:w-[160px] md:h-[160px]
@@ -52,8 +52,8 @@ export default function Hero() {
 
 
             {/* TITLE + BADGE */}
-            <div className="flex flex-col gap-8 md:flex-row md:items-center">
-              <h1 className="text-primary font-extrabold text-5xl md:text-6xl font-heading">
+            <div className="flex flex-col gap-2 md:gap-8 md:flex-row md:items-center">
+              <h1 className="text-primary font-extrabold text-3xl md:text-6xl font-heading">
                 Hi, I&apos;m Maulina
               </h1>
 
@@ -63,7 +63,7 @@ export default function Hero() {
             </div>
 
             {/* DESKRIPSI */}
-            <p className="text-lg text-black/80 max-w-xl leading-relaxed">
+            <p className="text-sm md:text-lg text-black/80 max-w-xl leading-relaxed">
               Fresh graduate in Informatics Engineering, eager to grow in software engineering —
               especially in web and mobile development.
             </p>

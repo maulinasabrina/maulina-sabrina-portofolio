@@ -9,15 +9,15 @@ export default function Project() {
     {/* Container Padding */}
    <section
     id="project"
-    className="w-full min-h-screen flex flex-col justify-center px-6 md:px-10 lg:px-20 xl:px-36 mx-auto pt-10"
+    className="w-full min-h-screen flex flex-col justify-center px-6 md:px-10 lg:px-20 xl:px-36 mx-auto pt-22 md:pt-10"
    >
-        <div className="flex items-center justify-center gap-6">
+        <div className="flex items-center justify-center gap-6 mb-4 md:mb-10">
   
             {/* Left Divider */}
             <div className="hidden md:block h-[2px] w-24 bg-primary/30 rounded-full"></div>
 
             {/* Title */}
-            <h2 className="text-5xl font-heading text-primary font-bold text-center">
+            <h2 className="text-3xl md:text-5xl font-heading text-primary font-bold text-center">
                 Highlighted Projects
             </h2>
 
@@ -26,7 +26,7 @@ export default function Project() {
 
         </div>
         
-       <div className="flex flex-col md:flex-row gap-6 mt-10">
+       <div className="flex flex-col md:flex-row gap-6">
           {projects.slice(0, 3).map((project, i) => (
             <div
               key={i}
@@ -46,7 +46,7 @@ export default function Project() {
 
 
       <div className="flex justify-center mt-6">
-        <Link href="/project" className="font-semibold text-lg">
+        <Link href="/project" className="font-semibold text:sm md:text-lg">
           <button className="px-6 py-2 bg-background text-primary border border-primary rounded-full hover:bg-primary/80 transition">
             See All Projects
           </button>
