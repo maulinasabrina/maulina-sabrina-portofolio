@@ -1,7 +1,7 @@
 // import ProjectCard from "/components/ProjectCard";
 
-import { ProjectCard } from "@/src/components/ProjectCard";
-import { projects } from "../data/data";
+import { ProjectCard } from "@/src/components/Project/ProjectCard";
+import { projects } from "../data/project";
 
 
 const ProjectPage = () => {

@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { ProjectCard } from "./ProjectCard";
-import { projects } from "../app/data/data";
+import { ProjectCard } from "../Project/ProjectCard";
+import { projects } from "../../app/data/project";
 
 export default function Project() {
 

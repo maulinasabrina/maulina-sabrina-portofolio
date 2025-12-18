@@ -1,6 +1,4 @@
-import { ProjectData } from "./definitions";
-
-
+import { ProjectData } from "./types/project";
 export const projects: ProjectData[] = [
   {
     title: "Sistem Rekomendasi Social Group Meeting Point",
@@ -227,35 +225,3 @@ export const projects: ProjectData[] = [
     
 ];
 
-
- export const techStack = [
-    { name: 'HTML5', icon: '/assets/icon/html5.png' },
-    { name: 'Tailwind', icon: '/assets/icon/tailwind.png' },
-    { name: 'SQL', icon: '/assets/icon/sql.png' },
-    { name: 'React.js', icon: '/assets/icon/react.png' },
-    { name: 'JavaScript', icon: '/assets/icon/javascript.png' },
-    { name: 'Next.js', icon: '/assets/icon/nextjs.png' },
-    { name: 'Node.js', icon: '/assets/icon/nodejs.png' },
-    { name: 'Git', icon: '/assets/icon/git.png' },
-    { name: 'Flutter', icon: '/assets/icon/flutter.png' },
-    { name: 'Laravel', icon: '/assets/icon/laravel.png' },
-    { name: 'Python', icon: '/assets/icon/python.png' },
-    { name: 'Postman', icon: '/assets/icon/postman.png' },
-    { name: 'Firebase', icon: '/assets/icon/firebase.png' },
-    { name: 'C++', icon: '/assets/icon/c++.png' },
-  ];
-
-  export   const tools = [
-    { name: "Notion",
-      icon: '/assets/images/notion.png'
-     },
-    { name: "Figma",
-      icon: '/assets/images/figma.png'
-     },
-    { name: "VS Code",
-      icon: '/assets/images/vscode.png'
-     },
-    { name: "Github",
-      icon: '/assets/images/github.png'
-     },
-  ];

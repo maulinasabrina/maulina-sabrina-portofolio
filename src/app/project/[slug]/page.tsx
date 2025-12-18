@@ -1,4 +1,4 @@
-import { projects } from "@/src/app/data/data";
+import { projects } from "@/src/app/data/project";
 
 export default async function ProjectDetailPage({
   params,

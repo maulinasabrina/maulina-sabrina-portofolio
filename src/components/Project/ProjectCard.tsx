@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Github, ExternalLink } from "lucide-react";
-import { ProjectData } from "../app/data/definitions";
+import { ProjectData } from "../../app/data/types/project";
 
 export const ProjectCard = ({
   title,
