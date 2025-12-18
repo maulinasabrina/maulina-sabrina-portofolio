@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
 import { Italianno } from "next/font/google";
-import localFont from "next/font/local";
 import "./globals.css";
+import localFont from "next/font/local";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-
-
-
-{/* Fonts  */}
+// Fonts
 const headingFont = Italianno({
   subsets: ["latin"],
   weight: "400",
@@ -20,13 +17,13 @@ const bodyFont = localFont({
   variable: "--font-body",
 });
 
-{/* Metadata */}
+// Metadata
 export const metadata: Metadata = {
   title: "Portofolio - Maulina Sabrina",
   description: "Portofolio website of Maulina Sabrina, showcasing projects, skills, and contact information.",
 };
 
-{/* Root Layout */}
+// Root Layout
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,12 +31,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${headingFont.variable} ${bodyFont.variable}`}>
-        <Header/>
-        <main className="min-h-screen px-6">
-           {children}
+      <body className={`${headingFont.variable} ${bodyFont.variable} flex flex-col min-h-screen`}>
+        <Header />
+
+        <main className="flex-1 px-6 flex flex-col justify-center">
+          {children}
         </main>
-        <Footer/>
+
+        <Footer />
       </body>
     </html>
   );

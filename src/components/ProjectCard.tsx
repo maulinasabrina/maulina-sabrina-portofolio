@@ -17,34 +17,40 @@ export const ProjectCard = ({
   const slug = title.toLowerCase().replace(/\s+/g, "-");
 
   return (
-    <div className="group rounded-xl p-6 bg-background border border-border/30 shadow-md hover:bg-primary/10 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+  <div className="group rounded-xl p-5 bg-background border border-border/30 shadow-md 
+  hover:bg-primary/10 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 
+  h-[360px] flex flex-col">
+
       {/* Thumbnail */}
       <div className="mb-4 overflow-hidden rounded-lg">
-        <img
+       <img
           src={thumbnail}
           alt={title}
-          className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-28 object-cover rounded-md group-hover:scale-105 transition-transform duration-300"
         />
+
       </div>
 
       {/* Title */}
-      <h3 className="text-2xl font-semibold text-primary/80 mb-1 group-hover:text-primary transition">
+      <h3 className="text-xl font-semibold text-primary/80 mb-1 group-hover:text-primary transition">
         {title}
       </h3>
 
       {/* Subtitle (optional) */}
       {subtitle && (
-        <p className="text-sm text-primary/60 italic mb-3">{subtitle}</p>
+        <p className="text-xs text-primary/60 italic mb-2 line-clamp-1">
+        {subtitle}
+        </p>
       )}
 
       {/* Short description */}
-      <p className="text-primary text-sm mb-4 line-clamp-3">
+      <p className="text-primary text-sm mb-3 line-clamp-2">
         {description}
       </p>
 
       {/* Tags */}
-      <div className="flex flex-wrap gap-2 mb-6">
-        {tags.slice(0, 3).map((tag) => ( // tampilkan 3 tag aja biar gak penuh
+      <div className="flex flex-wrap gap-2 mb-4">
+        {tags.slice(0, 2).map((tag) => (
           <span
             key={tag}
             className="text-xs px-2 py-1 rounded-full bg-border text-background"
@@ -53,6 +59,7 @@ export const ProjectCard = ({
           </span>
         ))}
       </div>
+
 
       {/* Buttons */}
       <div className="flex gap-3 text-sm">

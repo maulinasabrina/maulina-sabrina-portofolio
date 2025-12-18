@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Italianno } from "next/font/google";
 import localFont from "next/font/local";
-import "../globals.css";
 import Header from "@/src/components/Header";
 import Footer from "@/src/components/Footer";
 
