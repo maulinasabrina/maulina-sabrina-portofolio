@@ -47,7 +47,7 @@ export default function Project() {
 
       <div className="flex justify-center mt-6">
         <Link href="/project" className="font-semibold text:sm md:text-lg">
-          <button className="px-6 py-2 bg-background text-primary border border-primary rounded-full hover:bg-primary/80 transition">
+          <button className="px-4 md:px-6 py-1 md:py-2 bg-background text-primary border border-primary rounded-full hover:bg-primary hover:text-white transition">
             See All Projects
           </button>
         </Link>

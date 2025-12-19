@@ -19,22 +19,22 @@ export default function TechStackLine() {
       </div>  
 
       {/* MOBILE */}
-      <div className="grid grid-cols-2 gap-6 md:hidden">
+      <div className="grid grid-cols-2 gap-2 md:hidden">
         {categories.map((category, index) => (
           <TechStackMobileCard 
             key={category.title}
             category={category}
-            highlight={index === categories.length - 1}
           />
         ))}
       </div>
 
-      {/* DESKTOP */}
-      <div className="hidden md:flex gap-4 overflow-x-auto pb-4 no-scrollbar">
+    {/* DESKTOP */}
+      <div className="hidden md:grid grid-cols-4 gap-4">
         {categories.map((category) => (
           <TechStackDesktopCard key={category.title} category={category} />
         ))}
       </div>
+
 
     </section>
   );

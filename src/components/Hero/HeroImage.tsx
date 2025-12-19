@@ -7,20 +7,20 @@ export default function HeroImage({ src }: { src: string }) {
     <div className="flex justify-center md:justify-start">
       <div
         className="
-          bg-primary rounded-2xl flex items-center justify-center
-          w-[120px] h-[120px] 
-          md:w-[280px] md:h-[320px]
+          bg-primary rounded-sm flex items-center justify-center
+          w-[120px] h-[160px] 
+          md:w-[248px] md:h-[340px]
         "
       >
         <Image
           src={src}
           alt="Profile"
           width={400}
-          height={400}
+          height={600}
           className="
-            object-cover rounded-xl
-            w-[120px] h-[120px] border-2 border-primary md:border-none
-            md:w-[160px] md:h-[160px]
+            object-cover rounded-sm
+            w-[120px] h-[160px] border-2 border-primary md:border-none
+            md:w-[238px] md:h-[330px]
           "
         />
       </div>
