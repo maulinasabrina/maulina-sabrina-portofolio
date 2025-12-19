@@ -1,14 +1,15 @@
 import { projects } from "@/src/app/data/project";
+import { ProjectDetail } from "@/src/app/data/types/project";
+import { ExternalLink, Github } from "lucide-react";
+import Link from "next/link";
 
 export default async function ProjectDetailPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  // karena params adalah Promise, perlu di-await
   const { slug } = await params;
 
-  // cari project berdasarkan slug (case-insensitive)
   const project = projects.find(
     (p) => p.title.toLowerCase().replace(/\s+/g, "-") === slug
   );
@@ -17,126 +18,166 @@ export default async function ProjectDetailPage({
     return (
       <div className="text-center py-20 text-gray-500">
         <h2 className="text-2xl font-semibold mb-2">Project not found</h2>
-        <a href="/projects" className="text-blue-500 underline">
-          Back to Projects
-        </a>
+        <Link href="/project" className="text-sm underline text-gray-500 hover:text-primary">
+          &lt; back to projects
+        </Link>
       </div>
     );
   }
 
+  const d: ProjectDetail = project.details ?? {};
+
   return (
-    <div className="max-w-5xl md:max-w-4xl mx-auto px-1 md:px-6 py-10">
-      <h1 className="text-3xl font-bold mb-2">{project.title}</h1>
-      {project.subtitle && (
-        <p className="text-gray-600 mb-6">{project.subtitle}</p>
+    <div className="max-w-4xl mx-auto px-4 md:px-6 py-10">
+      
+      {/* Back button */}
+      <Link href="/project" className="text-sm underline text-gray-500 hover:text-primary">
+        &lt; back to projects
+      </Link>
+
+      {/* Title */}
+      <h1 className="text-lg md:text-4xl font-bold mt-4 text-gray-900">{project.title}</h1>
+
+      {/* Description */}
+      {project.description && (
+        <p className="text-gray-600 max-w-2xl mt-2 text-justify text-[10px] md:text-base">{project.description}</p>
       )}
 
+
+      {/* Buttons */}
+      <div className="flex flex-col md:flex-row items-start md:items-center gap-4 mt-6">
+
+        {/* ROLE */}
+        {d.role && (
+          <p className="text-primary text-[12px] md:text-lg font-semibold">
+            role: {d.role}
+          </p>
+        )}
+
+        {/* BUTTON WRAPPER  */}
+        <div className="flex flex-row items-start sm:items-center gap-2">
+
+              {/* Live Button */}
+              {project.live && (
+                <a
+                  href={project.live}
+                  target="_blank"
+                  className="flex items-center gap-2 hover:border hover:border-primary px-4 md:px-6 py-1.5 md:py-2 rounded-md text-[10px] md:text-sm font-semibold bg-primary hover:bg-background text-white hover:text-primary transition"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  view live
+                </a>
+              )}
+
+              {/* Code Button */}
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  className="flex items-center gap-2 hover:border hover:border-primary px-4 md:px-6 py-1.5 md:py-2 rounded-md text-[10px] md:text-sm font-semibold bg-primary hover:bg-background text-white hover:text-primary transition"
+                >
+                  <Github className="w-4 h-4" />
+                  view code
+                </a>
+              )}
+            </div>
+
+      </div>
+
+      {/* Thumbnail */}
       <img
-        src={project.thumbnail}
+        src={d.thumbnail || project.thumbnail}
         alt={project.title}
-        className="rounded-xl shadow-md mb-8"
+        className="rounded-xl shadow-sm mt-8 mb-10"
       />
 
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-2">💡 Deskripsi Singkat</h2>
-        <p className="text-gray-700 leading-relaxed">{project.description}</p>
-      </section>
+      {/* KEY FEATURES */}
+      {d.key_features && (
+        <section className="mb-10">
+          <h2 className="text-md md:text-md md:text-xl font-semibold mb-3 text-primary">✦ key_features</h2>
 
-      {project.details?.objective && (
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-2">🎯 Tujuan Proyek</h2>
-          <ul className="list-disc pl-5 space-y-1 text-gray-700">
-            {project.details.objective.map((obj, i) => (
-              <li key={i}>{obj}</li>
-            ))}
-          </ul>
-        </section>
-      )}
-
-      {project.details?.technologies && (
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-2">⚙️ Teknologi yang Digunakan</h2>
-          <div className="space-y-4">
-            {project.details.technologies.backend && (
-              <div>
-                <h3 className="font-semibold">🔸 Backend</h3>
-                <ul className="list-disc pl-5 text-gray-700">
-                  {project.details.technologies.backend.map((b, i) => (
-                    <li key={i}>{b}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            {project.details.technologies.frontend && (
-              <div>
-                <h3 className="font-semibold">🔸 Frontend / Mobile</h3>
-                <ul className="list-disc pl-5 text-gray-700">
-                  {project.details.technologies.frontend.map((f, i) => (
-                    <li key={i}>{f}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            {project.details.technologies.tools && (
-              <div>
-                <h3 className="font-semibold">🔸 Tools</h3>
-                <ul className="list-disc pl-5 text-gray-700">
-                  {project.details.technologies.tools.map((t, i) => (
-                    <li key={i}>{t}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-        </section>
-      )}
-
-      {project.details?.features && (
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-2">🧩 Fitur Utama</h2>
-          <div className="space-y-2">
-            {project.details.features.map((f, i) => (
-              <div key={i}>
-                <p className="font-medium">{f.name}</p>
-                <p className="text-gray-700 ml-2">{f.desc}</p>
+          <div className="grid md:grid-cols-2 gap-3">
+            {d.key_features.map((feat, i) => (
+              <div
+                key={i}
+                className="border border-primary/30 hover:border-primary hover:text-primary bg-background px-4 py-2 rounded-md text-gray-700 text-xs md:text-sm"
+              >
+                {feat}
               </div>
             ))}
           </div>
         </section>
       )}
 
-      <section className="mb-8">
-        <h3 className="text-xl font-semibold mb-2">🧠 Tags</h3>
-        <div className="flex flex-wrap gap-2">
-          {project.tags.map((tag, i) => (
-            <span
-              key={i}
-              className="px-3 py-1 bg-gray-100 border text-gray-700 rounded-full text-sm"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-      </section>
+      {/* CHALLENGES */}
+      {d.challenges && (
+        <section className="mb-10">
+          <h2 className="text-md md:text-xl font-semibold mb-3 text-primary">✦ challenges</h2>
 
-      <section className="flex gap-4 mt-8">
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-background text-black border-1 border-primary px-4 py-2 rounded-lg hover:bg-primary hover:text-background"
-        >
-          GitHub
-        </a>
-        <a
-          href={project.live}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700"
-        >
-          Live Demo
-        </a>
-      </section>
+          <div className="grid md:grid-cols-2 gap-3">
+            {d.challenges.map((ch, i) => (
+              <div
+                key={i}
+                className="border border-primary/30 hover:border-primary hover:text-primary bg-background px-4 py-2 rounded-md text-gray-700 text-xs md:text-sm"
+              >
+                {ch}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* SOLUTIONS */}
+      {d.solutions && (
+        <section className="mb-10">
+          <h2 className="text-md md:text-xl font-semibold mb-3 text-primary">✦ solutions</h2>
+
+          <div className="grid md:grid-cols-2 gap-3">
+            {d.solutions.map((s, i) => (
+              <div
+                key={i}
+                className="border border-primary/30 hover:border-primary hover:text-primary bg-background px-4 py-2 rounded-md text-gray-700 text-xs md:text-sm"
+              >
+                {s}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* TECH STACK */}
+      {d.tech_stack && (
+        <section className="mb-10">
+          <h2 className="text-md md:text-xl font-semibold mb-3 text-primary">✦ tech_stack</h2>
+
+          <div className="flex flex-wrap gap-2">
+            {d.tech_stack.backend?.map((t, i) => (
+              <span
+                key={i}
+                className="border border-primary/30 hover:border-primary hover:text-primary bg-background px-4 py-2 rounded-md text-gray-700 text-xs md:text-sm"
+              >
+                {t}
+              </span>
+            ))}
+            {d.tech_stack.frontend?.map((t, i) => (
+              <span
+                key={i}
+                className="border border-primary/30 hover:border-primary hover:text-primary bg-background px-4 py-2 rounded-md text-gray-700 text-xs md:text-sm"
+              >
+                {t}
+              </span>
+            ))}
+            {d.tech_stack.tools?.map((t, i) => (
+              <span
+                key={i}
+               className="border border-primary/30 hover:border-primary hover:text-primary bg-background px-4 py-2 rounded-md text-gray-700 text-xs md:text-sm"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 }

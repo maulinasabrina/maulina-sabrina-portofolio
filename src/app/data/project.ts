@@ -1,11 +1,16 @@
 import { ProjectData } from "./types/project";
+
 export const projects: ProjectData[] = [
+  // =======================
+  // 1. SOCIAL GROUP RECOMMENDATION (UNI)
+  // =======================
   {
+    type: "uni",
     title: "Sistem Rekomendasi Social Group Meeting Point",
     subtitle:
       "A Smart Recommendation App for Finding Perfect Hangout Spots — Individually or in Groups ☕",
     description:
-      "Aplikasi mobile berbasis Android yang membantu pengguna menemukan tempat nongkrong sesuai preferensi suasana, harga, dan lokasi. Sistem ini menggabungkan knowledge-based recommendation, aspect-based sentiment analysis, dan metode Borda Count untuk memberikan rekomendasi individu maupun kelompok secara akurat dan efisien.",
+      "This project was developed as my final assignment. It recommends hangout places using a knowledge-based approach. Preference knowledge is collected through Google Maps scraping, processed using sentiment analysis, and later matched with user preferences. The system also supports group recommendations by combining multiple user preferences using the Borda Count method. The frontend is built with Flutter, while the backend uses Flask and Firebase for authentication and data storage.",
     tags: [
       "Python",
       "Flutter",
@@ -18,66 +23,72 @@ export const projects: ProjectData[] = [
     ],
     github: "https://github.com/maulina-sabrina/social-group-recommendation",
     live: "https://appetize.io/app/b_ufppmoexgaj3zysocbfy47rhpm",
-    thumbnail:
-      "/assets/images/sospo.jpeg",
+    thumbnail: "/assets/images/sospo.jpeg",
+
     details: {
-      objective: [
-        "Mempermudah pengguna menentukan tempat meeting point sesuai preferensi pribadi atau kelompok.",
-        "Mengintegrasikan analisis sentimen ulasan dari Google Maps sebagai basis pengetahuan.",
-        "Menggabungkan preferensi beberapa pengguna dengan metode Borda untuk hasil yang representatif bagi kelompok."
+      role: "Fullstack Developer",
+      thumbnail: "/assets/images/sospo.jpeg",
+      github: "https://github.com/maulina-sabrina/social-group-recommendation",
+      live: "https://appetize.io/app/b_ufppmoexgaj3zysocbfy47rhpm",
+
+      key_features: [
+        "Individual Recommendation System",
+        "Group Preference Aggregation (Borda Count)",
+        "Aspect-Based Sentiment Analysis",
+        "Google Calendar Scheduling",
+        "User Profile Management",
+        "Firebase Auth & Firestore Sync"
       ],
-      technologies: {
+
+      challenges: [
+        "Highly noisy and inconsistent Google Maps review data",
+        "Fairly merging preferences from multiple users",
+        "Fluctuating sentiment scores using lexicon-based methods",
+        "Slow API responses caused by sentiment processing and scraping"
+      ],
+
+      solutions: [
+        "Building a cleaning pipeline for review normalization",
+        "Implementing Borda Count for voting-based ranking",
+        "Adding rule-based corrections to sentiment scoring",
+        "API optimization by fetching only the required data fields to reduce payload and improve performance."
+      ],
+
+      tech_stack: {
         backend: [
-          "Python (Flask API)",
-          "Knowledge-Based Reasoning (Constraint-based)",
-          "Aspect-Based Sentiment Analysis (Lexicon-based)",
-          "Borda Count Algorithm"
+          "Python",
+          "Flask API",
+          "Knowledge-Based Recommendation",
+          "Sentiment Analysis",
+          "Borda Count Algorithm",
+          "Google Calendar API",
+          "Firebase Authentication",
+          "Firestore Database"
         ],
         frontend: [
-          "Flutter (Dart)",
-          "Firebase Authentication & Firestore (database & login)",
-          "Google Calendar API Integration"
+          "Flutter",
+          "Dart",
         ],
-        tools: [
-          "SerpAPI (Web Scraping Google Maps)",
-          "Figma (UI/UX Design)",
-          "Google Colab (Model Training)",
-          "VS Code"
-        ]
-      },
-      features: [
-        { name: "🔐 Login & Register", desc: "Autentikasi pengguna (Firebase Auth)." },
-        {
-          name: "☕ Rekomendasi Individu",
-          desc: "Menampilkan tempat berdasarkan preferensi suasana, harga, dan menu."
-        },
-        {
-          name: "👥 Rekomendasi Kelompok (Borda Count)",
-          desc: "Menggabungkan preferensi beberapa anggota untuk rekomendasi bersama."
-        },
-        {
-          name: "🗓️ Penjadwalan Google Calendar",
-          desc: "Menjadwalkan waktu meeting dan mengirim undangan otomatis."
-        },
-        {
-          name: "👤 Profil Pengguna",
-          desc: "Edit nama, preferensi default, dan informasi akun."
-        }
-      ]
+        tools: ["SerpAPI", "Figma", "Google Colab", "VS Code"]
+      }
     }
   },
+
+  // =======================
+  // 2. PERSONAL PORTFOLIO & JOURNAL WEBSITE (PORTFOLIO)
+  // =======================
   {
+    type: "portfolio",
     title: "Personal Portfolio dan Journal Website",
     subtitle: "A Minimalist Web Platform for Writing Journals and Showcasing Projects ✨",
     description:
-      "Sebuah situs personal berbasis Laravel yang menyediakan halaman publik untuk menampilkan jurnal dan portofolio proyek, serta dashboard admin untuk mengelola konten. Website ini dibangun dengan konsep clean, minimalis, dan mudah dikembangkan.",
+      "Website personal modern berbasis Laravel yang menyediakan jurnal publik, portofolio, dan dashboard admin. Menerapkan gaya minimalis dengan Tailwind CSS.",
     tags: [
       "PHP",
       "Laravel",
       "Tailwind CSS",
       "Vite",
       "Alpine.js",
-      "Eloquent ORM",
       "Laravel Breeze",
       "Portfolio",
       "Blog System"
@@ -85,68 +96,54 @@ export const projects: ProjectData[] = [
     github: "https://github.com/maulinasabrina/maulina-life-repo",
     live: "https://maulina-life-repo-production-3143.up.railway.app/",
     thumbnail: "/assets/images/personal.jpeg",
+
     details: {
-      objective: [
-        "Menyediakan platform pribadi untuk menulis jurnal atau blog secara mudah.",
-        "Menampilkan daftar proyek sebagai portofolio dengan tampilan profesional.",
-        "Menyediakan dashboard admin yang aman untuk CRUD jurnal dan proyek.",
-        "Menciptakan tampilan yang clean dan responsif menggunakan Tailwind CSS."
+      role: "Fullstack Developer",
+      thumbnail: "/assets/images/personal.jpeg",
+      github: "https://github.com/maulinasabrina/maulina-life-repo",
+      live: "https://maulina-life-repo-production-3143.up.railway.app/",
+
+      key_features: [
+        "Admin Authentication (Laravel Breeze)",
+        "CRUD Journal with Slug Generation",
+        "Public Journal Display",
+        "Project Management Dashboard",
+        "Responsive Minimalist UI",
+        "Server-Rendered Blade Templates"
       ],
 
-      technologies: {
-        backend: [
-          "PHP 8.2",
-          "Laravel 12",
-          "Eloquent ORM",
-          "Laravel Breeze (Authentication)"
-        ],
-        frontend: [
-          "Tailwind CSS",
-          "Vite",
-          "Alpine.js",
-          "Blade Templates"
-        ],
-        tools: [
-          "Composer",
-          "NPM",
-          "Pest (Testing)",
-          "VS Code"
-        ]
-      },
+      challenges: [
+        "Perlu sistem autentikasi admin yang aman",
+        "Struktur konten yang harus mudah dikelola dari dashboard",
+        "Harus tetap ringan meski menggunakan Laravel",
+        "Desain UI minimalis tapi tetap informatif"
+      ],
 
-      features: [
-        {
-          name: "🔐 Autentikasi Admin",
-          desc: "Login dan register menggunakan Laravel Breeze, dengan proteksi middleware auth."
-        },
-        {
-          name: "📓 CRUD Journal",
-          desc: "Admin dapat membuat, mengedit, menghapus, dan melihat seluruh jurnal dengan slug otomatis."
-        },
-        {
-          name: "📰 Halaman Publik Journal",
-          desc: "Pengguna dapat melihat daftar jurnal dan membaca detail berdasarkan slug."
-        },
-        {
-          name: "💼 Manajemen Proyek",
-          desc: "Fitur untuk menyimpan project dengan deskripsi, tech stack, GitHub link, dan thumbnail."
-        },
-        {
-          name: "📊 Dashboard Admin",
-          desc: "Tampilan ringkas untuk melihat jumlah jurnal dan proyek secara keseluruhan."
-        },
-        {
-          name: "🎨 Frontend Responsif",
-          desc: "UI minimalis yang dibuat dengan Tailwind, cocok untuk blog dan portofolio modern."
-        },
-      ]
+      solutions: [
+        "Menggunakan Laravel Breeze sebagai pondasi autentikasi",
+        "Membangun CMS mini untuk jurnal + portofolio",
+        "Optimasi database & cache untuk performa lebih cepat",
+        "Menggunakan Tailwind untuk menciptakan UI clean"
+      ],
+
+      tech_stack: {
+        backend: ["PHP 8.2", "Laravel 12", "Eloquent ORM", "Laravel Breeze"],
+        frontend: ["Tailwind CSS", "Vite", "Alpine.js", "Blade Templates"],
+        tools: ["Composer", "NPM", "VS Code", "Pest"]
+      }
     }
   },
+
+  // =======================
+  // 3. CAFE FINDER (LEARNING)
+  // =======================
   {
-    "title": "Cafe Finder - Web App to Discover Nearby Coffee Shops",
-    "subtitle": "Peta Interaktif untuk Menemukan Kafe Terdekat ☕📍",
-    "description": "Aplikasi web berbasis JavaScript yang menampilkan peta interaktif untuk menemukan kafe di sekitar pengguna. Frontend menggunakan Leaflet dan backend menggunakan Node.js & Express untuk mem-proxy data dari SerpAPI.",
-    "tags": [
+    type: "learning",
+    title: "Cafe Finder - Web App to Discover Nearby Coffee Shops",
+    subtitle: "Peta Interaktif untuk Menemukan Kafe Terdekat ☕📍",
+    description:
+      "Aplikasi web berbasis peta yang menampilkan coffee shops terdekat menggunakan Leaflet.js. Backend proxy dengan Express mengambil data real-time dari SerpAPI.",
+    tags: [
       "JavaScript",
       "Node.js",
       "Express",
@@ -155,73 +152,46 @@ export const projects: ProjectData[] = [
       "SerpAPI",
       "Frontend",
       "Backend",
-      "Geolocation",
-      "Map App"
+      "Geolocation"
     ],
-    "github": "https://github.com/maulinasabrina/cafe_finder",
-    "live": "https://cafefinder-production-c8d8.up.railway.app/",
-    "thumbnail": "/assets/images/cafe.jpeg",
-    "details": {
-      "objective": [
-        "Memberikan cara mudah mencari kafe terdekat melalui peta interaktif.",
-        "Mendukung pencarian berbasis kata kunci seperti 'coffee', 'kopi', dan lainnya.",
-        "Menampilkan marker lengkap dengan nama, rating, dan alamat kafe.",
-        "Menyediakan backend ringan untuk mengambil data kafe real-time dari SerpAPI.",
-        "Membangun aplikasi geolocation yang cepat, minimalis, dan mudah dikembangkan."
+    github: "https://github.com/maulinasabrina/cafe_finder",
+    live: "https://cafefinder-production-c8d8.up.railway.app/",
+    thumbnail: "/assets/images/cafe.jpeg",
+
+    details: {
+      role: "Fullstack Developer",
+      thumbnail: "/assets/images/cafe.jpeg",
+      github: "https://github.com/maulinasabrina/cafe_finder",
+      live: "https://cafefinder-production-c8d8.up.railway.app/",
+
+      key_features: [
+        "Real-Time Geolocation Detection",
+        "Interactive Map with Leaflet",
+        "Search Coffee Shops by Keyword",
+        "Radius Filter",
+        "Auto Fit Bounds Map View",
+        "Custom Cafe Markers & Popups"
       ],
 
-      "technologies": {
-        "backend": [
-          "Node.js",
-          "Express.js",
-          "Fetch API / Dynamic Import",
-          "Environment Variables (SERP_API_KEY, SERP_BASE_URL)"
-        ],
-        "frontend": [
-          "HTML5",
-          "CSS3",
-          "Vanilla JavaScript",
-          "Leaflet.js",
-          "OpenStreetMap Tiles"
-        ],
-        "tools": [
-          "NPM",
-          "VS Code",
-          "SerpAPI",
-          "Browser Geolocation API"
-        ]
-      },
+      challenges: [
+        "Mengolah data dari SerpAPI agar rapi dan usable",
+        "Membangun map UI yang interaktif tapi tetap ringan",
+        "Menangani error geolocation user",
+        "Membuat backend proxy agar API key tidak terekspos"
+      ],
 
-      "features": [
-        {
-          "name": "📍 Geolokasi Pengguna",
-          "desc": "Menampilkan posisi pengguna di peta dengan marker khusus beserta radius lokasi."
-        },
-        {
-          "name": "🔎 Pencarian Kafe",
-          "desc": "Pencarian berdasarkan kata kunci yang dikirim ke backend kemudian diteruskan ke SerpAPI."
-        },
-        {
-          "name": "📡 Filter Radius",
-          "desc": "Menampilkan kafe dalam radius tertentu berdasarkan pilihan pengguna."
-        },
-        {
-          "name": "☕ Marker Kafe & Popup",
-          "desc": "Marker khusus kafe dengan popup yang menampilkan nama, rating, dan alamat."
-        },
-        {
-          "name": "🌐 Backend API Proxy",
-          "desc": "Endpoint Node.js yang memformat data SerpAPI menjadi JSON siap pakai untuk frontend."
-        },
-        {
-          "name": "🧭 Auto Fit Bounds",
-          "desc": "Peta otomatis menyesuaikan zoom agar seluruh marker pencarian terlihat."
-        }
-      ]
+      solutions: [
+        "Membuat normalizer hasil SerpAPI menggunakan Node.js",
+        "Optimasi Leaflet agar tidak lag saat multi-marker",
+        "Fallback location handler untuk perangkat tertentu",
+        "Membangun Express proxy server untuk keamanan API"
+      ],
+
+      tech_stack: {
+        backend: ["Node.js", "Express.js", "SerpAPI Proxy"],
+        frontend: ["HTML5", "CSS3", "Vanilla JS", "Leaflet.js"],
+        tools: ["NPM", "VS Code", "OpenStreetMap"]
+      }
     }
   }
-
-
-    
 ];
-
