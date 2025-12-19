@@ -86,7 +86,7 @@ export const experience = [
     ],
     button: {
       text: "View Learning Journal →",
-      link: "https://www.notion.so/",
+      link: "https://www.notion.so/Learning-Journal-2c93a40147f7803abcd6ddc53eb23a28",
     },
   },
 ];
