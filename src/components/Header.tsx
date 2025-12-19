@@ -39,8 +39,6 @@ export default function Header() {
   };
 
   return (
-    // <nav className="w-full fixed top-0 left-0 z-50 font-body bg-background ">
-    // <nav className="w-full sticky top-0 left-0 z-50 font-body bg-background transition-all duration-300  ">
     <nav className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'py-3 bg-background/80 backdrop-blur-md shadow-sm' : 'py-6'
       }`}>
@@ -85,13 +83,13 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden bg-white/90 backdrop-blur border-b border-black/5">
-          <div className="flex flex-col p-5 gap-3">
+        <div className="md:hidden bg-background backdrop-blur border-b border-black/5">
+          <div className="flex flex-col p-5">
             {links.map((link) => (
               <Link 
                 key={link.href}
                 href={link.href} 
-                className="text-lg py-2"
+                className="text-sm pl-4 py-2 hover:bg-primary/10"
                 onClick={() => setOpen(false)}
               >
                 {link.label}
