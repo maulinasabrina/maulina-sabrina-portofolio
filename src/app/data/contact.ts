@@ -12,4 +12,4 @@ export const whatsappText =
 
 export const whatsappNumber = "6282331598307";
 
-export const cvFile = "/assets/files/MaulinaSabrina_CV.pdf";
+export const cvFile = "/assets/files/MaulinaSabrina_CV_ATS.pdf";
